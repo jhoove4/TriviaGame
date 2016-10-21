@@ -1,0 +1,51 @@
+body.background{
+	background-image: no-repeat;
+	background: center;
+}
+.container{
+	height: 363px;
+	width: 600px;
+background-color: clear;
+text-align: left;
+color: yellow;
+margin-left: 400px;
+border: 2px solid white;
+/*background-color: yellow;
+*//*opacity: 5;
+*/}
+div.background{
+	width: auto;
+	height: 417px;
+	margin: 0;
+}
+p{
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+	background-color: blue;
+}
+li{
+	font-size: 25px;
+	font-family: 'Indie Flower', cursive;
+	color: black;
+	
+}
+li:hover{
+	color:red;
+	background-color: black;
+}
+h1{
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	font-size: 70px;
+	color: blue;
+	-webkit-text-stroke:.5px black;
+}
+h2{
+	margin-top: 0;
+}
+h3{
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	-webkit-text-stroke:.5px yellow;
+}
