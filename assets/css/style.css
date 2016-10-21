@@ -27,10 +27,11 @@ li{
 	font-size: 25px;
 	font-family: 'Indie Flower', cursive;
 	color: black;
+	/*-webkit-text-stroke:.5px yellow;*/
 	
 }
 li:hover{
-	color:red;
+	color:blue;
 	background-color: black;
 }
 h1{
