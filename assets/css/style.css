@@ -3,7 +3,7 @@ body.background{
 	background: center;
 }
 .container{
-	height: 363px;
+	height: 417px;
 	width: 600px;
 background-color: clear;
 text-align: left;
@@ -17,6 +17,10 @@ div.background{
 	width: 600px;
 	height: 417px;
 	margin: 0;
+}
+background-image{
+	width: 600px,
+	height:417px;
 }
 #start{
 /*text-align: center;
