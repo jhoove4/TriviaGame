@@ -58,7 +58,7 @@ $(document).ready(function() {
 		counter = setInterval(decrement, 1000);
 	};
 	function decrement(){
-		number--;
+		timeLeft--;
 		$('<h3> Time Left</h3>').html('0');
 	};
 
