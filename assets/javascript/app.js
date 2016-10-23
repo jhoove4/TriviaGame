@@ -38,92 +38,30 @@
  var currentQuestion = 0;
  var userGuess = [];
  var quizOver = false;
- setTimeOut(timeUp, 15 * 1000);
+ setInterval(timeUp, 15 * 1000);
  var game = $('#game');
  displaynext();
+ var timeLeft= 15;
 
 $(document).ready(function() {
 	function startGame(){
 		$('#startButton').on('click', function(){
+			var startButton = $(this).attr('timeUp');
+			 currentQuestion = questions[Math.floor(Math.random()*questions.length)];
+			 console.log(currentQuestion);
 			 displayquestions();
 			 setTimeOut(timeUp, 15*1000)
+			 console.log(timeUp);
 		})
 	} 
-	function timeUp(){
+	function run(){
+		counter = setInterval(decrement, 1000);
+	};
+	function decrement(){
+		number--;
 		$('<h3> Time Left</h3>').html('0');
-		alert('Time is Up!' );
-	}
+	};
 
-  //Display the first question:
-  // displayCurrentQuestion();
-
-  $(this).find(".quizMessage").hide();
-
-  //On clicking start, display the next question
-  $(this).find("#startButton").on("click", function() {
-    if (!quizOver) {
-
-//       value = $("input[type='radio']: checked").val();
-
-//       if (value == undefined) {
-//         $(document).find(".quizMessage").text("Please select an answer");
-//         $(document).find(".quizMessage").show();
-//         } else {
-//         $(document).find(".quizMessage").hide();
-//         if(value == questions[currentQuestion].correctAnswer) {
-//           correctAnswer++;
-//         }
-//         currentQuestion++;
-//         if(currentQuestion < questions.length) {
-//           displayCurrentQuestion();
-//         }else {
-//           displayScore();
-//           //$(document.find("nextButton").toggle();
-//           //$(document).find(".playAgainButton").toggle();
-//           //Change the text in the next button to ask if user wants to play again.
-//           $(document).find(".nextButton").text("Play Again?");
-//           quizOver = true;
-//         }
-//       }
-//     }else {
-//        {//quiz is over and clicked the nextButton (which should display as 'Play Again?')
-//        quizOver = false;
-//        $(document).find(".nextButton").text("NextQuestion");
-//        resetQuiz();
-//        displayCurrentQuestion();
-//        hideScore();
-//      }
-
-//    };
-
-//  });
-//  //This displays the currentQuestion AND choices:
-//  function displayCurrentQuestion() {
-//    console.log("In display current question");
-
-//    var question = questions[currentQuestion].question;
-//    var questionClass = $(document).find(".quizContainer > .question");
-//    var choiceList= $(document).find(".quizContainer > .choiceList");
-//    var numChoices = question[currentQuestion].choices;
-
-//    //Here I will set the questionClass text to the currentQuestion
-//    $(questionClass).text(question);
-
-//    //Remove all <li> elements.
-//    var choice; for (i = 0; i < numChoices; i++) {
-//      choice = questions[currentQuestion].choices[i];
-//      $('<li><input type="radio" value =' + 1 + ' name = dynradio" />' + choice + '</li>').appendTo(choiceList);
-//    }
-
-//  }
-//   function displayScore() {
-//    $(document).find(".quizContainer > .result").text("You score: "+ correctAnswer + " out of: " + questions.length);
-//    $(document).find(".quizContainer > .result").show();
-
-//    function hideScore() {
-//      $(document).find(" .result").hide();
-//  }
-// }
 }
 )})
    
