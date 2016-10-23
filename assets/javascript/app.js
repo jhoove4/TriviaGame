@@ -43,10 +43,18 @@
  displaynext();
  var timeLeft= 15;
 
-$(document).ready(function() {
+	//start the game and send the page to the first question, start the timer
+		//start the counter and display the question with answer choices
+
+	//timer counts down from 15, user either answers or runs out of time
+	//page gives the correct answer and moves to the next question
+	//repeats this until all the questions have been answered
+	//final score is given and game resets
+	$(document).ready(function() {
+
 	function startGame(){
 		$('#startButton').on('click', function(){
-			var startButton = $(this).attr('timeUp');
+			var startButton = $(this).attr('timeLeft');
 			 currentQuestion = questions[Math.floor(Math.random()*questions.length)];
 			 console.log(currentQuestion);
 			 displayquestions();
@@ -57,6 +65,7 @@ $(document).ready(function() {
 	function run(){
 		counter = setInterval(decrement, 1000);
 	};
+	
 	function decrement(){
 		timeLeft--;
 		$('<h3> Time Left</h3>').html('0');
