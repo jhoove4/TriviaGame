@@ -3,24 +3,24 @@ body.background{
 	background: center;
 }
 .container{
-	height: 417px;
+	height: auto;
 	width: 600px;
-background-color: clear;
-text-align: left;
+/*background-color: clear;
+*/text-align: left;
 color: yellow;
 margin-left: 400px;
 border: 2px solid white;
 /*background-color: yellow;
 *//*opacity: 5;
 */}
-div.background{
+/*div.background{
 	width: 600px;
 	height: 417px;
 	margin: 0;
-}
+}*/
 background-image{
 	width: 600px,
-	height:417px;
+	height:auto;
 }
 #start{
 /*text-align: center;
@@ -62,4 +62,7 @@ h3{
 	text-align: left;
 	font-size: 20px;
 	-webkit-text-stroke:.5px yellow;
+}
+form{
+
 }
