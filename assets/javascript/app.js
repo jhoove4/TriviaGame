@@ -48,7 +48,7 @@ $('#start').on('click', function(){
 function stopTimer(){
 	clearInterval(counter);
 	$('#reset').on('click', function(){
-		(reset);
+		reset();
 	})
 
 
@@ -56,7 +56,8 @@ function stopTimer(){
 function reset(){
 	clearInterval(counter);
 	$('#reset').on('click', function(){
-		(reset);
+		startGame();
+
 	})
 }
 function getScore(form) {
@@ -91,6 +92,6 @@ $('#getScore').on('click', function(){
 $('#reset').on('click', function(){
 	stopTimer();
 	clearInterval(counter);
-	(reset);
+	reset(timeInSecs);
 
 })
