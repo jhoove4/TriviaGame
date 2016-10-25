@@ -8,7 +8,7 @@ var counter;
 var endTime =0;
 // Insert number of questions displayed in answer area
 var answers = new Array(8);
-
+var reset = 60;
 // Insert answers to questions
 answers[0] = "Rumple Stiltskin";
 answers[1] = "The woods";
@@ -47,9 +47,18 @@ $('#start').on('click', function(){
 
 function stopTimer(){
 	clearInterval(counter);
+	$('#reset').on('click', function(){
+		(reset);
+	})
+
 
 }
-
+function reset(){
+	clearInterval(counter);
+	$('#reset').on('click', function(){
+		(reset);
+	})
+}
 function getScore(form) {
   var score = 0;
   var currElt;
@@ -82,4 +91,6 @@ $('#getScore').on('click', function(){
 $('#reset').on('click', function(){
 	stopTimer();
 	clearInterval(counter);
+	(reset);
+
 })

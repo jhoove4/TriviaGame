@@ -1,6 +1,7 @@
 body.background{
 	background-image: no-repeat;
 	background: center;
+	height: auto;
 }
 .container{
 	height: auto;
