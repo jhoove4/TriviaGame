@@ -16,12 +16,12 @@
 	<div style="background-image: url(assets/images/Fairy-Tale.png); height: auto;">
 		<h2>Answer the Questions Within the Time Alotted to Win</h2>
 	<!-- <div class="startButton"> -->
-		<button id="start" class="btn btn-default btn-lg" type="button"><b>Start</b></button>
+		<button onclick="setTimeout(startGame, 1000*30)" id="start" class="btn btn-default btn-lg" type="button"><b>Start</b></button>
 	<!-- </div> -->
 
-		<h3>Time Left:</h3>
+		<h3 id="timer">Time Left:60</h3>
 
-	<form name="quiz">
+	<form id="quiz" name="quiz">
 <p>1. What character would steal children from the parents if they couldn't guess his name?</p>
 <ul style="margin-top: 1pt"><b>
   <li><input type="radio" name="q1" value="Donald Trump">Donald Trump</li>
@@ -29,7 +29,7 @@
   <li><input type="radio" name="q1" value="The Grim Reaper">The Grim Reaper</li>							 		  <li><input type="radio" name="q1" value="The Grinch">The Grinch</li></b>
 </ul>
 
-<p>2. Where did Hansel and Gretle get lost?</p>
+<p>2. Where did Hansel and Gretel get lost?</p>
 <ul style="margin-top: 1pt"><b>
   <li><input type="radio" name="q2" value="The MidWest">The MidWest</li>
   <li><input type="radio" name="q2" value="Top of a Mountain">Top of a Mountain</li>
@@ -68,7 +68,7 @@
 <ul style="margin-top: 1pt"><b>
   <li><input type="radio" name="q4" value="Snow White">Snow White</li>
   <li><input type="radio" name="q4" value="Beauty and the Beast">Beauty and the Beast</li>
-  <li><input type="radio" name="q4" value="Alice in Wonderland">Alice in Wonderland</li>
+  <li><input type="radio" name="q4" value="Alice In Wonderland">Alice In Wonderland</li>
   <li><input type="radio" name="q4" value="Reservoir Dogs">Reservoir Dogs</li></b>
 </ul>
 <p>8. In what story did a group of dedicated men serve one woman?</p>
@@ -79,103 +79,16 @@
   <li><input type="radio" name="q4" value="Snow White and the 7 Dwarves">Snow White and the 7 Dwarves</li></b>
 </ul>
 
-<input type="button" value="Get score" onClick="getScore(this.form)">
-<input type="reset" value="Clear answers">
+<input id="getScore" type="button" value="Get score">
+<input id="reset" type="reset" value="Clear answers">
 <p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
 Correct answers:<br>
 <textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
 </textarea>
 </form>
 
-		
-	<!-- <div id="firstQ">
-		<p>
-			<b>What character would steal children from the parents if they couldn't guess his name?</b>
-				<ol>
-					<li><b>Donald Trump</b></li>
-					<li><b>Rumple Stiltskin</b></li>
-					<li><b>The Grim Reaper</b></li>
-					<li><b>The Grinch</li></b>
-				</ol>
-		</p>
 	</div>
-	<div id="secondQ">
-		<p>
-			<b>Where did Hansel and Gretle get lost?</b>
-				<ol>
-					<b><li>Somewhere in the Mid West</li>
-					<li>Top of a mountain</li>
-					<li>The woods</li>
-					<li>A pay toilet in Scotland</li></b>
-				</ol>
-		</p> 
-	</div>
-	<div id="thirdQ">
-		<p>
-			<b>What character traded the family cow for a handful of magic beans?</b>
-				<ol>
-					<b><li>Gomer Pile</li>
-					<li>Jack Skeleington</li>
-					<li>Jack B. Nimble</li>
-					<li>Jack</li></b>
-				</ol>
-		</p>
-	</div>
-	<div id="fourthQ">
-		<p>
-			<b>What story had a neurotic character who thought the sky was falling?</b>
-				<ol>
-					<b><li>Chicken Little</li>
-					<li>Stewart Little</li>
-					<li>The Ghost and Mr. Chicken</li>
-					<li>The Princess and the Pea</li></b>
-				</ol>
-		</p>
-	</div>
-	<div id="fifthQ">
-		<p>
-			<b>Which story had a wolf that could blow down your house and then would eat you?</b>
-				<ol>
-					<b><li>Little Red Riding Hood</li>
-					<li>The Three Little Pigs</li>
-					<li>UnderWorld</li>
-					<li>Donald Trumps Presidential Campaign</li></b>
-				</ol>
-		</p>
-	</div>
-	<div id="sixthQ">
-		<p>
-			<b>Which Disney movie cover picture had to be replaced because of a phalic symbol?</b>
-				<ol>
-					<b><li>Alladin</li>
-					<li>Cinderella</li>
-					<li>Beauty and the Beast</li>
-					<li>The Little Mermaid</li></b>
-				</ol>
-		</p>
-	</div>
-	<div id="seventhQ">
-		<p>In which story featured a white rabbit running away saying "I'm late for a very important date!" 
-			<ol>
-				<b><li>Snow White</li>
-				<li>Beauty and the Beast</li>
-				<li>Alice in Wonderland</li>
-				<li>Reservoir Dogs</li></b>
-			</ol>
-		</p>
-	</div>
-	<div id="eigthQ">
-		<p>In what story did a group of dedicated men serve one woman?
-			<ol>
-				<b><li>Englands Recent History</li>
-				<li>Pulp FIction</li>
-				<li>Dogma</li>
-				<li>Snow White and the 7 Dwarves</li></b>
-			</ol>
-		</p>
-	</div> -->
-	</div>
-	</div>
+</div>
 <script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>		 <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
