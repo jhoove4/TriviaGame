@@ -26,8 +26,6 @@ function onTimer(){
    $('#timer').html(timeInSecs);
     if( timeInSecs<=0){
     	stopTimer();
-    	// clearInterval(counter);
-
     	
     }
 }
@@ -39,27 +37,19 @@ counter =setInterval(onTimer, 1000);
 
 $('#start').on('click', function(){
 	startGame();
-	// 	var startTime = myTime;
-	// 	console.log(startTime);
-	// 	startTime=parseInt(myTime);
-	// $('<h3>Time Left</h3>').html(myTime);
+	
 	});
 
 function stopTimer(){
 	clearInterval(counter);
-	$('#reset').on('click', function(){
-		reset();
-	})
-
-
 }
+
 function reset(){
-	clearInterval(counter);
-	$('#reset').on('click', function(){
-		startGame();
-
-	})
+	stopTimer();
+	
+		startGame();	
 }
+
 function getScore(form) {
   var score = 0;
   var currElt;
@@ -91,7 +81,6 @@ $('#getScore').on('click', function(){
 })
 $('#reset').on('click', function(){
 	stopTimer();
-	clearInterval(counter);
-	reset(timeInSecs);
+	reset();
 
 })
